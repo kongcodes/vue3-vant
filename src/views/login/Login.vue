@@ -8,11 +8,11 @@ defineProps({
   msg: String,
 });
 
-function go() {
+function go () {
   router.push({ path: '/teaminfo' });
 }
 
-function loginBtn() {
+function loginBtn () {
   Toast.loading({
     message: '加载中...',
     duration: 0,
@@ -28,14 +28,17 @@ function loginBtn() {
 
 <template>
   <!-- node-sass  axios  env环境测试 -->
-  <h1 @click="go">{{ msg || 'go' }}</h1>
+  <h1 @click="go">{{ msg || '点击跳转到下一页' }}</h1>
 
-  <h1>登录页</h1>
+  <h1 class="h1">登录页</h1>
   <van-button @click="loginBtn" type="primary">登录调接口</van-button>
 </template>
 
 <style scoped>
 a {
   color: #42b983;
+}
+.h1 {
+  font-size: 26px;
 }
 </style>

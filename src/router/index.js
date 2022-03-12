@@ -6,15 +6,22 @@ const routes = [
   {
     path: '/',
     redirect: '/login',
-    component: Login,
   },
   {
     path: '/login',
+    name: 'login',
     component: Login,
+    meta: {
+      title: '1-测试页',
+    },
   },
   {
     path: '/teaminfo',
+    name: 'teaminfo',
     component: TeamInfo,
+    meta: {
+      title: '2-测试页',
+    },
   },
 ];
 
